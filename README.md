@@ -16,7 +16,7 @@ La solución está construida sobre **.NET Core** implementando **Clean Architec
 ### Backend Tech Stack:
 - **Framework:** .NET 10 / C#
 - **ORM:** Entity Framework Core
-- **Database:** SQL Server
+- **Database:** Postgres
 - **Seguridad:** JWT (JSON Web Tokens)
 - **Pruebas:** xUnit, Moq, FluentAssertions
 

@@ -1,0 +1,61 @@
+name: Build and Push Docker Images to GHCR
+
+on:
+  push:
+    branches: [ "main", "master", "Pruebas-Actions" ]
+  pull_request:
+    branches: [ "main", "master", "Pruebas-Actions" ]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME_BACKEND: ${{ github.repository_owner }}/asisyaproductapi
+  IMAGE_NAME_FRONTEND: ${{ github.repository_owner }}/asisya-frontend
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      # Log-in automático en GitHub Container Registry
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      # Convertir nombre del owner a minúsculas
+      - name: Lowercase repository owner
+        id: string
+        run: |
+          echo "OWNER_LC=${OWNER,,}" >> $GITHUB_OUTPUT
+        env:
+          OWNER: '${{ github.repository_owner }}'
+
+      # Compilar y subir Backend
+      - name: Build and Push Backend
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile # Ajusta si está dentro de AsisyaProductApi.Api/Dockerfile
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/${{ steps.string.outputs.OWNER_LC }}/asisyaproductapi:latest
+            ${{ env.REGISTRY }}/${{ steps.string.outputs.OWNER_LC }}/asisyaproductapi:${{ github.sha }}
+
+      # Compilar y subir Frontend
+      - name: Build and Push Frontend
+        uses: docker/build-push-action@v5
+        with:
+          context: ./asisya-product-web
+          file: ./asisya-product-web/Dockerfile
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/${{ steps.string.outputs.OWNER_LC }}/asisya-frontend:latest
+            ${{ env.REGISTRY }}/${{ steps.string.outputs.OWNER_LC }}/asisya-frontend:${{ github.sha }}
