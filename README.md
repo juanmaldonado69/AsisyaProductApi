@@ -55,5 +55,5 @@ Para escalar la solución en un entorno Cloud (AWS, Azure o GCP):
 
 1. Clonar el repositorio:
    ```bash
-   git clone <URL_DEL_REPOSIOTO>
+   git clone <https://github.com/juanmaldonado69/AsisyaProductApi/blob/Pruebas-Actions/README.md>
    cd AsisyaProductApi
