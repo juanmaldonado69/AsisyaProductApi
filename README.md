@@ -4,7 +4,7 @@ Solución FullStack desarrollada para la prueba técnica de Asisya, orientada a 
 
 ---
 
-## 🏗️ Arquitectura y Criterios Técnicos
+##  Arquitectura y Criterios Técnicos
 
 La solución está construida sobre **.NET Core** implementando **Clean Architecture** estructurada en 4 capas principales:
 
@@ -16,13 +16,13 @@ La solución está construida sobre **.NET Core** implementando **Clean Architec
 ### Backend Tech Stack:
 - **Framework:** .NET 10 / C#
 - **ORM:** Entity Framework Core
-- **Database:** SQL Server
+- **Database:** Postgres
 - **Seguridad:** JWT (JSON Web Tokens)
 - **Pruebas:** xUnit, Moq, FluentAssertions
 
 ---
 
-## ⚡ Estrategia de Carga Masiva y Rendimiento
+##  Estrategia de Carga Masiva y Rendimiento
 
 Para soportar la inserción masiva de 100,000 productos sin agotar los recursos de memoria RAM ni congelar el servidor:
 - **Batch Processing:** Inserción por lotes parametrizados (p. ej. 5,000 registros por bloque).
@@ -31,7 +31,7 @@ Para soportar la inserción masiva de 100,000 productos sin agotar los recursos 
 
 ---
 
-## ☁️ Escalabilidad Horizontal en la Nube
+##  Escalabilidad Horizontal en la Nube
 
 Para escalar la solución en un entorno Cloud (AWS, Azure o GCP):
 
@@ -49,7 +49,7 @@ Para escalar la solución en un entorno Cloud (AWS, Azure o GCP):
 
 ---
 
-## 🚀 Instrucciones de Ejecución Local
+##  Instrucciones de Ejecución Local
 
 ### Opción 1: Con Docker Compose (Recomendado)
 
