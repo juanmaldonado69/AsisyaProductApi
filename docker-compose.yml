@@ -5,7 +5,7 @@ services:
     environment:
       POSTGRES_DB: AsisyaDb
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_PASSWORD: Juan8085
     ports:
       - "5432:5432"
     volumes:
@@ -19,7 +19,7 @@ services:
     ports:
       - "5000:80"
     environment:
-      - ConnectionStrings__DefaultConnection=Host=postgres-asisya;Database=AsisyaDb;Username=postgres;Password=mysecretpassword;
+      - ConnectionStrings__DefaultConnection=Host=postgres-asisya;Database=AsisyaDb;Username=postgres;Password=Juan8085;
       - ASPNETCORE_ENVIRONMENT=Development
     depends_on:
       - postgres-asisya
