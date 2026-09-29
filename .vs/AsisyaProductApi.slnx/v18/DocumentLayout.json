@@ -1,0 +1,220 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1BB58983-60DE-441D-B544-BC5112E18D8D}|Elementos de la soluci\u00F3n{1BB58983-60DE-441D-B544-BC5112E18D8D}|C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}",
+      "RelativeMoniker": "D:0:0:{1BB58983-60DE-441D-B544-BC5112E18D8D}|Elementos de la soluci\u00F3n{1BB58983-60DE-441D-B544-BC5112E18D8D}|solutionrelative:docker-compose.yml||{06C066C6-04A2-4E5D-8202-439FD4234EF1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BB58983-60DE-441D-B544-BC5112E18D8D}|Elementos de la soluci\u00F3n{1BB58983-60DE-441D-B544-BC5112E18D8D}|C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{1BB58983-60DE-441D-B544-BC5112E18D8D}|Elementos de la soluci\u00F3n{1BB58983-60DE-441D-B544-BC5112E18D8D}|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9D804B6-62E4-4B49-C76E-3F57F5179A6F}|AsisyaProductApi.Api\\AsisyaProductApi.Api.csproj|c:\\users\\ifort\\onedrive\\desktop\\juank\\prueba tecnica\\asisyaproductapi\\asisyaproductapi.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F9D804B6-62E4-4B49-C76E-3F57F5179A6F}|AsisyaProductApi.Api\\AsisyaProductApi.Api.csproj|solutionrelative:asisyaproductapi.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9982B73A-702E-BE15-E97D-6A549EC3C340}|AsisyaProductApi.Tests\\AsisyaProductApi.Tests.csproj|c:\\users\\ifort\\onedrive\\desktop\\juank\\prueba tecnica\\asisyaproductapi\\asisyaproductapi.tests\\productscontrollertests.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9982B73A-702E-BE15-E97D-6A549EC3C340}|AsisyaProductApi.Tests\\AsisyaProductApi.Tests.csproj|solutionrelative:asisyaproductapi.tests\\productscontrollertests.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9982B73A-702E-BE15-E97D-6A549EC3C340}|AsisyaProductApi.Tests\\AsisyaProductApi.Tests.csproj|c:\\users\\ifort\\onedrive\\desktop\\juank\\prueba tecnica\\asisyaproductapi\\asisyaproductapi.tests\\productservicetests.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9982B73A-702E-BE15-E97D-6A549EC3C340}|AsisyaProductApi.Tests\\AsisyaProductApi.Tests.csproj|solutionrelative:asisyaproductapi.tests\\productservicetests.cs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9D804B6-62E4-4B49-C76E-3F57F5179A6F}|AsisyaProductApi.Api\\AsisyaProductApi.Api.csproj|c:\\users\\ifort\\onedrive\\desktop\\juank\\prueba tecnica\\asisyaproductapi\\asisyaproductapi.api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9D804B6-62E4-4B49-C76E-3F57F5179A6F}|AsisyaProductApi.Api\\AsisyaProductApi.Api.csproj|solutionrelative:asisyaproductapi.api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9D804B6-62E4-4B49-C76E-3F57F5179A6F}|AsisyaProductApi.Api\\AsisyaProductApi.Api.csproj|c:\\users\\ifort\\onedrive\\desktop\\juank\\prueba tecnica\\asisyaproductapi\\asisyaproductapi.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9D804B6-62E4-4B49-C76E-3F57F5179A6F}|AsisyaProductApi.Api\\AsisyaProductApi.Api.csproj|solutionrelative:asisyaproductapi.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9D804B6-62E4-4B49-C76E-3F57F5179A6F}|AsisyaProductApi.Api\\AsisyaProductApi.Api.csproj|c:\\users\\ifort\\onedrive\\desktop\\juank\\prueba tecnica\\asisyaproductapi\\asisyaproductapi.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9D804B6-62E4-4B49-C76E-3F57F5179A6F}|AsisyaProductApi.Api\\AsisyaProductApi.Api.csproj|solutionrelative:asisyaproductapi.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA7879B5-6F67-06BF-3B2C-1FD018AB20D4}|AsisyaProductApi.Application\\AsisyaProductApi.Application.csproj|c:\\users\\ifort\\onedrive\\desktop\\juank\\prueba tecnica\\asisyaproductapi\\asisyaproductapi.application\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA7879B5-6F67-06BF-3B2C-1FD018AB20D4}|AsisyaProductApi.Application\\AsisyaProductApi.Application.csproj|solutionrelative:asisyaproductapi.application\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA7879B5-6F67-06BF-3B2C-1FD018AB20D4}|AsisyaProductApi.Application\\AsisyaProductApi.Application.csproj|c:\\users\\ifort\\onedrive\\desktop\\juank\\prueba tecnica\\asisyaproductapi\\asisyaproductapi.application\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA7879B5-6F67-06BF-3B2C-1FD018AB20D4}|AsisyaProductApi.Application\\AsisyaProductApi.Application.csproj|solutionrelative:asisyaproductapi.application\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9D804B6-62E4-4B49-C76E-3F57F5179A6F}|AsisyaProductApi.Api\\AsisyaProductApi.Api.csproj|c:\\users\\ifort\\onedrive\\desktop\\juank\\prueba tecnica\\asisyaproductapi\\asisyaproductapi.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F9D804B6-62E4-4B49-C76E-3F57F5179A6F}|AsisyaProductApi.Api\\AsisyaProductApi.Api.csproj|solutionrelative:asisyaproductapi.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9D804B6-62E4-4B49-C76E-3F57F5179A6F}|AsisyaProductApi.Api\\AsisyaProductApi.Api.csproj|c:\\users\\ifort\\onedrive\\desktop\\juank\\prueba tecnica\\asisyaproductapi\\asisyaproductapi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9D804B6-62E4-4B49-C76E-3F57F5179A6F}|AsisyaProductApi.Api\\AsisyaProductApi.Api.csproj|solutionrelative:asisyaproductapi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAADoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-09-25T02:24:48.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2026-09-25T02:21:15.17Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Api\\Dockerfile",
+              "RelativeDocumentMoniker": "AsisyaProductApi.Api\\Dockerfile",
+              "ToolTip": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Api\\Dockerfile",
+              "RelativeToolTip": "AsisyaProductApi.Api\\Dockerfile",
+              "ViewState": "AgIAABUAAAAAAAAAAAAkwBoAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-09-25T02:19:04.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductsControllerTests.cs.cs",
+              "DocumentMoniker": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Tests\\ProductsControllerTests.cs.cs",
+              "RelativeDocumentMoniker": "AsisyaProductApi.Tests\\ProductsControllerTests.cs.cs",
+              "ToolTip": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Tests\\ProductsControllerTests.cs.cs",
+              "RelativeToolTip": "AsisyaProductApi.Tests\\ProductsControllerTests.cs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-25T02:03:44.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductServiceTests.cs.cs",
+              "DocumentMoniker": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Tests\\ProductServiceTests.cs.cs",
+              "RelativeDocumentMoniker": "AsisyaProductApi.Tests\\ProductServiceTests.cs.cs",
+              "ToolTip": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Tests\\ProductServiceTests.cs.cs",
+              "RelativeToolTip": "AsisyaProductApi.Tests\\ProductServiceTests.cs.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAA1wCoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-25T01:59:16.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Api\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "AsisyaProductApi.Api\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Api\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "AsisyaProductApi.Api\\Controllers\\ProductsController.cs",
+              "ViewState": "AgIAADgBAAAAAAAAAAAAAEQBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T14:00:32.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductDto.cs",
+              "DocumentMoniker": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Application\\DTOs\\ProductDto.cs",
+              "RelativeDocumentMoniker": "AsisyaProductApi.Application\\DTOs\\ProductDto.cs",
+              "ToolTip": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Application\\DTOs\\ProductDto.cs",
+              "RelativeToolTip": "AsisyaProductApi.Application\\DTOs\\ProductDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T15:33:34.995Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "AsisyaProductApi.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Api\\appsettings.json",
+              "RelativeToolTip": "AsisyaProductApi.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-23T14:29:01.562Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "AsisyaProductApi.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "AsisyaProductApi.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwAoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T13:53:47.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Api\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "AsisyaProductApi.Api\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Api\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "AsisyaProductApi.Api\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAkwFsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T15:37:15.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CategoryDto.cs",
+              "DocumentMoniker": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Application\\DTOs\\CategoryDto.cs",
+              "RelativeDocumentMoniker": "AsisyaProductApi.Application\\DTOs\\CategoryDto.cs",
+              "ToolTip": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Application\\DTOs\\CategoryDto.cs",
+              "RelativeToolTip": "AsisyaProductApi.Application\\DTOs\\CategoryDto.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBAAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T15:32:43.275Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Api\\Program.cs",
+              "RelativeDocumentMoniker": "AsisyaProductApi.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\IFORT\\OneDrive\\Desktop\\Juank\\Prueba tecnica\\AsisyaProductApi\\AsisyaProductApi.Api\\Program.cs",
+              "RelativeToolTip": "AsisyaProductApi.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-23T13:52:40.171Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+services:
+  postgres-asisya:
+    image: postgres:16-alpine
+    container_name: postgres-asisya
+    environment:
+      POSTGRES_DB: AsisyaDb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  asisyaproductapi:
+    build:
+      context: .
+      dockerfile: AsisyaProductApi.Api/Dockerfile
+    container_name: asisyaproductapi
+    ports:
+      - "5000:80"
+    environment:
+      - ConnectionStrings__DefaultConnection=Host=postgres-asisya;Database=AsisyaDb;Username=postgres;Password=mysecretpassword;
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - postgres-asisya
+
+  asisya-frontend:
+    build:
+      context: ./asisya-product-web
+      dockerfile: Dockerfile
+    container_name: asisya_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - asisyaproductapi
+
+volumes:
+  postgres_data:

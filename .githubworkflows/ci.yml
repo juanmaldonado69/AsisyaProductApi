@@ -1,0 +1,32 @@
+name: Asisya API CI Pipeline
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Código
+      uses: actions/checkout@v3
+
+    - name: Configurar SDK de .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '10.0.x'
+
+    - name: Restaurar Dependencias
+      run: dotnet restore
+
+    - name: Compilar Solución
+      run: dotnet build --no-restore -c Release
+
+    - name: Ejecutar Pruebas Unitarias e Integración
+      run: dotnet test --no-build -c Release --verbosity normal
+
+    - name: Validar Build de Docker
+      run: docker build -t asisyaproductapi:ci -f AsisyaProductApi.Api/Dockerfile .

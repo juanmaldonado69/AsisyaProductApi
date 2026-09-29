@@ -1,0 +1,17 @@
+C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Infrastructure\bin\Debug\net10.0\AsisyaProductApi.Infrastructure.deps.json
+C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Infrastructure\bin\Debug\net10.0\AsisyaProductApi.Infrastructure.dll
+C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Infrastructure\bin\Debug\net10.0\AsisyaProductApi.Infrastructure.pdb
+C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Infrastructure\bin\Debug\net10.0\AsisyaProductApi.Application.dll
+C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Infrastructure\bin\Debug\net10.0\AsisyaProductApi.Domain.dll
+C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Infrastructure\bin\Debug\net10.0\AsisyaProductApi.Application.pdb
+C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Infrastructure\bin\Debug\net10.0\AsisyaProductApi.Domain.pdb
+C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Infrastructure\obj\Debug\net10.0\AsisyaProductApi.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Infrastructure\obj\Debug\net10.0\AsisyaProductApi.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Infrastructure\obj\Debug\net10.0\AsisyaProductApi.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Infrastructure\obj\Debug\net10.0\AsisyaProductApi.Infrastructure.AssemblyInfo.cs
+C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Infrastructure\obj\Debug\net10.0\AsisyaProductApi.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Infrastructure\obj\Debug\net10.0\AsisyaPr.19940E5F.Up2Date
+C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Infrastructure\obj\Debug\net10.0\AsisyaProductApi.Infrastructure.dll
+C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Infrastructure\obj\Debug\net10.0\refint\AsisyaProductApi.Infrastructure.dll
+C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Infrastructure\obj\Debug\net10.0\AsisyaProductApi.Infrastructure.pdb
+C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Infrastructure\obj\Debug\net10.0\ref\AsisyaProductApi.Infrastructure.dll
