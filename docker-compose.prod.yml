@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: postgres-asisya-prod
+    environment:
+      POSTGRES_DB: asisyaproductdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: YourSecurePassword123!
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data_prod:/var/lib/postgresql/data
+    restart: always
+
+  backend:
+    image: ghcr.io/juanmaldonado69/asisyaproductapi:latest
+    container_name: asisyaproductapi-prod
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=asisyaproductdb;Username=postgres;Password=YourSecurePassword123!
+    ports:
+      - "5000:80"
+    depends_on:
+      - postgres
+    restart: always
+
+  frontend:
+    image: ghcr.io/juanmaldonado69/asisya-frontend:latest
+    container_name: asisya-frontend-prod
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: always
+
+volumes:
+  postgres_data_prod:
