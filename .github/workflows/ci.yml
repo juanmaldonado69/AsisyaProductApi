@@ -43,7 +43,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: ./Dockerfile # Ajusta si está dentro de AsisyaProductApi.Api/Dockerfile
+          file: ./AsisyaProductApi.Api/Dockerfile # Ajusta si está dentro de AsisyaProductApi.Api/Dockerfile
           push: true
           tags: |
             ${{ env.REGISTRY }}/${{ steps.string.outputs.OWNER_LC }}/asisyaproductapi:latest
