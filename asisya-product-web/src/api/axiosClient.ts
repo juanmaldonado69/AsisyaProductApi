@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Asegúrate de verificar el puerto donde corre tu API .NET (ejemplo: 5066 o 5000)
-const API_URL = 'http://localhost:5066/api';
+// Vite inyecta automáticamente el valor de .env.development o .env.production según el entorno
+const API_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5066/api';
 
 const axiosClient = axios.create({
   baseURL: API_URL,
