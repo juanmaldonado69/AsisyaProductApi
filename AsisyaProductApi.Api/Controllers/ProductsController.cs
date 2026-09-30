@@ -8,7 +8,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AsisyaProductApi.Api.Controllers
 {
-  
     [ApiController]
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase
@@ -20,14 +19,23 @@ namespace AsisyaProductApi.Api.Controllers
             _context = context;
         }
 
-        // 1. Inserción masiva de 100,000 productos
-        [HttpPost("generate/{count}")]
-        public async Task<IActionResult> GenerateRandomProducts(int count = 10)
+        /// <summary>
+        /// Generación masiva ultrarrápida de productos (Soporta desde 5 hasta 1,000,000 registros).
+        /// Acepta el conteo tanto por Query Parameter (?count=100) como por Path (/generate/100).
+        /// </summary>
+        [HttpPost("generate/{count:int?}")]
+        [HttpPost("generate")]
+        public async Task<IActionResult> GenerateRandomProducts([FromRoute] int? countRoute, [FromQuery] int? count)
         {
-            if (count <= 0 || count > 50000)
-                return BadRequest("La cantidad a generar debe estar entre 1 y 50,000 productos.");
+            // Determina la cantidad recibida por ruta o por query string (por defecto 10)
+            int totalToGenerate = countRoute ?? count ?? 10;
 
+            if (totalToGenerate <= 0 || totalToGenerate > 1000000)
+                return BadRequest("La cantidad a generar debe estar entre 1 y 1,000,000 de productos.");
+
+            // 1. Obtener los IDs de categorías existentes
             var categories = await _context.Categories
+                .AsNoTracking()
                 .Select(c => c.CategoryID)
                 .ToListAsync();
 
@@ -35,16 +43,17 @@ namespace AsisyaProductApi.Api.Controllers
                 return BadRequest("Debes crear al menos una categoría antes de generar productos.");
 
             var random = new Random();
-            int batchSize = 1000;
+            int batchSize = 25000; // Tamaño de lote ideal para BulkInsert en PostgreSQL
             int totalProcessed = 0;
-
-            _context.ChangeTracker.AutoDetectChangesEnabled = false;
 
             try
             {
-                while (totalProcessed < count)
+                // Desactivar el ChangeTracker para máximo rendimiento de memoria
+                _context.ChangeTracker.AutoDetectChangesEnabled = false;
+
+                while (totalProcessed < totalToGenerate)
                 {
-                    int currentBatchSize = Math.Min(batchSize, count - totalProcessed);
+                    int currentBatchSize = Math.Min(batchSize, totalToGenerate - totalProcessed);
                     var productsBatch = new List<Product>(currentBatchSize);
 
                     for (int i = 0; i < currentBatchSize; i++)
@@ -52,31 +61,43 @@ namespace AsisyaProductApi.Api.Controllers
                         int categoryId = categories[random.Next(categories.Count)];
                         productsBatch.Add(new Product
                         {
-                            ProductName = $"Producto {Guid.NewGuid().ToString("N")[..6].ToUpper()}",
+                            ProductName = $"Prod-{Guid.NewGuid().ToString("N")[..8].ToUpper()}",
                             UnitPrice = Math.Round((decimal)(random.NextDouble() * 500 + 5), 2),
                             UnitsInStock = (short)random.Next(1, 200),
                             CategoryID = categoryId,
-                            Discontinued = false
+                            Discontinued = false,
+                            QuantityPerUnit = "1 unit"
                         });
                     }
 
-                    await _context.Products.AddRangeAsync(productsBatch);
-                    await _context.SaveChangesAsync();
-
-                    _context.ChangeTracker.Clear();
+                    // EFCore.BulkExtensions realiza un COPY directo en PostgreSQL (Súper Rápido)
+                    await _context.BulkInsertAsync(productsBatch);
 
                     totalProcessed += currentBatchSize;
                 }
+
+                return Ok(new 
+                { 
+                    Message = $"Se generaron {totalToGenerate:N0} productos exitosamente.", 
+                    TotalGenerated = totalToGenerate 
+                });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new 
+                { 
+                    Message = "Error al ejecutar la generación masiva.", 
+                    Error = ex.Message,
+                    InnerError = ex.InnerException?.Message 
+                });
             }
             finally
             {
                 _context.ChangeTracker.AutoDetectChangesEnabled = true;
             }
-
-            return Ok(new { Message = $"Se generaron {count} productos exitosamente en lotes.", TotalGenerated = count });
         }
 
-        // 2. Crear un único producto (Para el formulario del Frontend)
+        // 2. Crear un único producto
         [HttpPost]
         public async Task<IActionResult> CreateProduct([FromBody] CreateProductDto dto)
         {
@@ -108,7 +129,7 @@ namespace AsisyaProductApi.Api.Controllers
             });
         }
 
-        // 3. Paginación, búsqueda e instrucción ILike para PostgreSQL
+        // 3. Paginación y búsqueda
         [HttpGet]
         public async Task<IActionResult> GetProducts(
             [FromQuery] string? search,
@@ -120,14 +141,12 @@ namespace AsisyaProductApi.Api.Controllers
             {
                 var query = _context.Products.AsNoTracking().AsQueryable();
 
-                // Filtro de búsqueda insensible a mayúsculas/minúsculas
                 if (!string.IsNullOrWhiteSpace(search))
                 {
                     var term = search.Trim();
                     query = query.Where(p => EF.Functions.ILike(p.ProductName, $"%{term}%"));
                 }
 
-                // Filtro por categoría
                 if (categoryId.HasValue && categoryId.Value > 0)
                 {
                     query = query.Where(p => p.CategoryID == categoryId.Value);
@@ -169,7 +188,7 @@ namespace AsisyaProductApi.Api.Controllers
             }
         }
 
-        // 4. Obtener detalle por ID (incluye imagen de la categoría en Base64)
+        // 4. Detalle por ID
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProductById(int id)
         {
@@ -192,7 +211,7 @@ namespace AsisyaProductApi.Api.Controllers
             });
         }
 
-        // 5. Actualizar un producto existente
+        // 5. Actualizar
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProduct(int id, [FromBody] CreateProductDto dto)
         {
@@ -210,7 +229,7 @@ namespace AsisyaProductApi.Api.Controllers
             return NoContent();
         }
 
-        // 6. Eliminar un producto
+        // 6. Eliminar
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
@@ -221,121 +240,5 @@ namespace AsisyaProductApi.Api.Controllers
             await _context.SaveChangesAsync();
             return NoContent();
         }
-
-        //PRuebas
-
-        [HttpPost("generate")]
-
-
-
-        public async Task<IActionResult> GenerateRandomProducts2(int count = 10)
-
-
-
-        {
-
-
-
-            var categories = await _context.Categories.ToListAsync();
-
-
-
-            if (!categories.Any())
-
-
-
-                return BadRequest("Debes crear al menos una categoría antes de generar productos.");
-
-
-
-
-
-
-
-            var random = new Random();
-
-
-
-            var products = new List<Product>();
-
-
-
-
-
-
-
-            for (int i = 1; i <= count; i++)
-
-
-
-            {
-
-
-
-                var category = categories[random.Next(categories.Count)];
-
-
-
-                products.Add(new Product
-
-
-
-                {
-
-
-
-                    ProductName = $"Producto Aleatorio {Guid.NewGuid().ToString().Substring(0, 5)}",
-
-
-
-                    UnitPrice = Math.Round((decimal)(random.NextDouble() * 100 + 1), 2),
-
-
-
-                    UnitsInStock = (short)random.Next(1, 100),
-
-
-
-                    CategoryID = category.CategoryID,
-
-
-
-                    Discontinued = false
-
-
-
-                });
-
-
-
-            }
-
-
-
-
-
-
-
-            await _context.Products.AddRangeAsync(products);
-
-
-
-            await _context.SaveChangesAsync();
-
-
-
-
-
-
-
-            return Ok(new { Message = $"Se generaron {count} productos exitosamente." });
-
-
-
-        }
-
-
-
-
     }
 }
