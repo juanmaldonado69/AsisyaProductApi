@@ -1,4 +1,4 @@
-version: '3.8'
+version: '4.2'
 
 services:
   postgres:
@@ -9,9 +9,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: YourSecurePassword123!
     ports:
-      - "5432:5432"
-    volumes:
-      - postgres_data_prod:/var/lib/postgresql/data
+      - "5433:5432"  # <-- Cambiado a 5433 en la máquina host
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres -d asisyaproductdb"]
       interval: 3s
@@ -24,6 +22,7 @@ services:
     container_name: asisyaproductapi-prod
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
+      # NOTA: Internamente en la red de docker sigue usando Host=postgres;Port=5432
       - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=asisyaproductdb;Username=postgres;Password=YourSecurePassword123!
     ports:
       - "5000:80"
