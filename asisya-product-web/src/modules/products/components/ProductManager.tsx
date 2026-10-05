@@ -217,6 +217,7 @@ export const ProductManager: React.FC = () => {
                 <th className="py-3 px-4">Categoría</th>
                 <th className="py-3 px-4">Precio</th>
                 <th className="py-3 px-4">Stock</th>
+                <th className="py-3 px-4">Stock2</th>
                 <th className="py-3 px-4 text-center">Acciones</th>
               </tr>
             </thead>
@@ -229,6 +230,7 @@ export const ProductManager: React.FC = () => {
                     <td className="py-3 px-4">{p.categoryName || 'N/A'}</td>
                     <td className="py-3 px-4">${p.unitPrice?.toFixed(2)}</td>
                     <td className="py-3 px-4">{p.unitsInStock}</td>
+                    <td className="py-3 px-4">{p.stock}</td>
                     <td className="py-3 px-4 text-center space-x-2">
                       <button onClick={() => handleViewDetail(p.productID)} className="px-2 py-1 bg-blue-100 text-blue-700 rounded text-xs hover:bg-blue-200">Ver</button>
                       <button onClick={() => handleOpenEdit(p)} className="px-2 py-1 bg-amber-100 text-amber-700 rounded text-xs hover:bg-amber-200">Editar</button>
@@ -279,6 +281,10 @@ export const ProductManager: React.FC = () => {
                 <div>
                   <label className="block text-sm font-medium text-gray-700">Stock</label>
                   <input type="number" required value={formData.unitsInStock} onChange={(e) => setFormData({ ...formData, unitsInStock: Number(e.target.value) })} className="mt-1 block w-full border rounded-md p-2 text-sm" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">Stock2</label>
+                  <input type="number" required value={formData.stock} onChange={(e) => setFormData({ ...formData, stock: Number(e.target.value) })} className="mt-1 block w-full border rounded-md p-2 text-sm" />
                 </div>
               </div>
               <div className="flex justify-end space-x-2 pt-4 border-t">
