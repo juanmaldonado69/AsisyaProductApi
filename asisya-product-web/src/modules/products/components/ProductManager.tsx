@@ -27,6 +27,7 @@ export const ProductManager: React.FC = () => {
     categoryID: 1,
     unitPrice: 0,
     unitsInStock: 0,
+    stock: 0,
     quantityPerUnit: '1 unit'
   });
 
@@ -68,6 +69,7 @@ export const ProductManager: React.FC = () => {
       categoryID: categories.length > 0 ? categories[0].categoryID : 1,
       unitPrice: 0,
       unitsInStock: 0,
+      stock: 0,
       quantityPerUnit: '1 unit'
     });
     setShowModal(true);
@@ -81,6 +83,7 @@ export const ProductManager: React.FC = () => {
       categoryID: product.categoryID,
       unitPrice: product.unitPrice,
       unitsInStock: product.unitsInStock,
+      stock: 0,
       quantityPerUnit: '1 unit'
     });
     setShowModal(true);
@@ -284,7 +287,7 @@ export const ProductManager: React.FC = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700">Stock2</label>
-                  <input type="number" required value={formData.stock} onChange={(e) => setFormData({ ...formData, stock: Number(e.target.value) })} className="mt-1 block w-full border rounded-md p-2 text-sm" />
+                  <input type="number" required value={formData.stock ?? 0} onChange={(e) => setFormData({ ...formData, stock: Number(e.target.value) })} className="mt-1 block w-full border rounded-md p-2 text-sm" />
                 </div>
               </div>
               <div className="flex justify-end space-x-2 pt-4 border-t">
