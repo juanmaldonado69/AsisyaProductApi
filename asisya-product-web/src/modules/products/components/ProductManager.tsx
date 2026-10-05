@@ -188,6 +188,7 @@ export const ProductManager: React.FC = () => {
               <option value={10}>10 registros</option>
               <option value={20}>20 registros</option>
               <option value={50}>50 registros</option>
+              <option value={1000000}>1000000 registros</option>
             </select>
 
             <button
