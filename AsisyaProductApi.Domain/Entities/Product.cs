@@ -16,6 +16,7 @@ namespace AsisyaProductApi.Domain.Entities
         public short UnitsOnOrder { get; set; }
         public short ReorderLevel { get; set; }
         public bool Discontinued { get; set; }
+        public int Stock{get;set;}
 
         public Category? Category { get; set; }
         public Supplier? Supplier { get; set; }

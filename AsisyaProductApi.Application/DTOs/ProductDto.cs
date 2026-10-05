@@ -12,6 +12,7 @@ namespace AsisyaProductApi.Application.DTOs
         public decimal UnitPrice { get; set; }
         public short UnitsInStock { get; set; }
         public string? QuantityPerUnit { get; set; }
+         public int Stock {get;set;}
     }
 
     public class BulkProductRequestDto
@@ -29,6 +30,7 @@ namespace AsisyaProductApi.Application.DTOs
         public decimal UnitPrice { get; set; }
         public short UnitsInStock { get; set; }
         public string? CategoryPicture { get; set; }
+        public int Stock {get;set;}
     }
 
     public class PagedResultDto<T>

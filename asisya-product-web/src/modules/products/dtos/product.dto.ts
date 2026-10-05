@@ -7,6 +7,7 @@ export interface ProductResponseDto {
   unitsInStock: number;
   quantityPerUnit?: string;
   categoryPicture?: string;
+  stock: number;
 }
 
 export interface CreateProductDto {

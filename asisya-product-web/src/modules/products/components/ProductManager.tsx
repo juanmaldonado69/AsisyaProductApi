@@ -63,6 +63,7 @@ export const ProductManager: React.FC = () => {
               <th style={{ padding: '10px' }}>Nombre</th>
               <th style={{ padding: '10px' }}>Precio Un.</th>
               <th style={{ padding: '10px' }}>Stock</th>
+              <th style={{ padding: '10px' }}>Stock 2</th>
             </tr>
           </thead>
           <tbody>
@@ -73,6 +74,7 @@ export const ProductManager: React.FC = () => {
                   <td style={{ padding: '10px' }}>{prod.productName}</td>
                   <td style={{ padding: '10px' }}>${prod.unitPrice?.toFixed(2) ?? '0.00'}</td>
                   <td style={{ padding: '10px' }}>{prod.unitsInStock}</td>
+                  <td style={{ padding: '10px' }}>{prod.Stock}</td>
                 </tr>
               ))
             ) : (

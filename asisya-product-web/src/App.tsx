@@ -300,6 +300,7 @@ export default function App() {
                       <th className="py-3 px-4">Categoría</th>
                       <th className="py-3 px-4">Precio</th>
                       <th className="py-3 px-4">Stock</th>
+                      <th className="py-3 px-4">Stock 2</th>
                       <th className="py-3 px-4 text-center">Acciones</th>
                     </tr>
                   </thead>
@@ -312,6 +313,7 @@ export default function App() {
                           <td className="py-3 px-4">{p.categoryName || 'N/A'}</td>
                           <td className="py-3 px-4">${p.unitPrice?.toFixed(2)}</td>
                           <td className="py-3 px-4">{p.unitsInStock}</td>
+                          <td className="py-3 px-4">{p.stock}</td>
                           <td className="py-3 px-4 text-center space-x-2">
                             <button
                               onClick={() => handleViewDetail(p.productID)}
@@ -425,6 +427,18 @@ export default function App() {
                     min="0"
                     value={formData.unitsInStock}
                     onChange={(e) => setFormData({ ...formData, unitsInStock: Number(e.target.value) })}
+                    className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-sm focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">Stock 2</label>
+                  <input
+                    type="number"
+                    required
+                    min="0"
+                    value={formData.stock}
+                    onChange={(e) => setFormData({ ...formData, stock: Number(e.target.value) })}
                     className="mt-1 block w-full border border-gray-300 rounded-md p-2 text-sm focus:ring-blue-500 focus:border-blue-500"
                   />
                 </div>

@@ -66,7 +66,8 @@ namespace AsisyaProductApi.Api.Controllers
                             UnitsInStock = (short)random.Next(1, 200),
                             CategoryID = categoryId,
                             Discontinued = false,
-                            QuantityPerUnit = "1 unit"
+                            QuantityPerUnit = "1 unit",
+                            Stock = (short)random.Next(1, 200)
                         });
                     }
 
@@ -113,7 +114,8 @@ namespace AsisyaProductApi.Api.Controllers
                 UnitPrice = dto.UnitPrice,
                 UnitsInStock = dto.UnitsInStock,
                 QuantityPerUnit = dto.QuantityPerUnit ?? "1 unit",
-                Discontinued = false
+                Discontinued = false,
+                Stock = dto.Stock
             };
 
             _context.Products.Add(product);
@@ -125,7 +127,8 @@ namespace AsisyaProductApi.Api.Controllers
                 ProductName = product.ProductName,
                 CategoryID = product.CategoryID,
                 UnitPrice = product.UnitPrice,
-                UnitsInStock = product.UnitsInStock
+                UnitsInStock = product.UnitsInStock,
+                Stock = product.Stock
             });
         }
 
@@ -165,7 +168,8 @@ namespace AsisyaProductApi.Api.Controllers
                         CategoryID = p.CategoryID,
                         CategoryName = p.Category.CategoryName ?? string.Empty,
                         UnitPrice = p.UnitPrice,
-                        UnitsInStock = p.UnitsInStock
+                        UnitsInStock = p.UnitsInStock,
+                        Stock = p.Stock
                     })
                     .ToListAsync();
 
@@ -207,7 +211,8 @@ namespace AsisyaProductApi.Api.Controllers
                 CategoryName = product.Category?.CategoryName ?? string.Empty,
                 UnitPrice = product.UnitPrice,
                 UnitsInStock = product.UnitsInStock,
-                CategoryPicture = product.Category?.Picture != null ? Convert.ToBase64String(product.Category.Picture) : null
+                CategoryPicture = product.Category?.Picture != null ? Convert.ToBase64String(product.Category.Picture) : null,
+                Stock = product.Stock
             });
         }
 
@@ -223,6 +228,7 @@ namespace AsisyaProductApi.Api.Controllers
             product.SupplierID = dto.SupplierID;
             product.UnitPrice = dto.UnitPrice;
             product.UnitsInStock = dto.UnitsInStock;
+            product.Stock = dto.Stock;
             if (dto.QuantityPerUnit != null) product.QuantityPerUnit = dto.QuantityPerUnit;
 
             await _context.SaveChangesAsync();

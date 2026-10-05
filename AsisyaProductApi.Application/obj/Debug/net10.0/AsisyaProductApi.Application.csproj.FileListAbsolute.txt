@@ -13,3 +13,4 @@ C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProd
 C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Application\obj\Debug\net10.0\refint\AsisyaProductApi.Application.dll
 C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Application\obj\Debug\net10.0\AsisyaProductApi.Application.pdb
 C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Application\obj\Debug\net10.0\ref\AsisyaProductApi.Application.dll
+C:\Users\IFORT\OneDrive\Desktop\Juank\Prueba tecnica\AsisyaProductApi\AsisyaProductApi.Application\obj\Debug\net10.0\AsisyaProductApi.Application.sourcelink.json
